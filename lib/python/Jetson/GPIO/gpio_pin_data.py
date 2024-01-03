@@ -114,7 +114,12 @@ JETSON_ORIN_PIN_DEFS = [
     (113, 'PR.05', "tegra234-gpio", 36, 16, 'UART1_CTS', 'GP73_UART1_CTS_N', None, None),
     (3, 'PAA.03', "tegra234-gpio-aon", 37, 26, 'CAN1_DIN', 'GP20_CAN1_DIN', None, None),
     (52, 'PI.01', "tegra234-gpio", 38, 20, 'I2S2_DIN', 'GP124', None, None),
-    (51, 'PI.00', "tegra234-gpio", 40, 21, 'I2S2_DOUT', 'GP123', None, None)
+    (51, 'PI.00', "tegra234-gpio", 40, 21, 'I2S2_DOUT', 'GP123', None, None),
+    (38, 'PG.03', "tegra234-gpio", 0, 0, 'GPIO01', 'GP110', None, None),
+    (2, 'PA.02', "tegra234-gpio", 0, 0, 'GPIO04', 'GP204_DAP6_DIN', None, None),
+    (1, 'PA.01', "tegra234-gpio", 0, 0, 'GPIO05', 'GP203_DAP6_DOUT', None, None),
+    (143, 'PAC.05', "tegra234-gpio", 0, 0, 'GPIO11', 'GP166', None, None),
+    (104, 'PQ.04', "tegra234-gpio", 0, 0, 'GPIO18', 'GPGP64', None, None)
 ]
 
 compats_jetson_orins = (
@@ -469,7 +474,7 @@ jetson_gpio_data = {
 
 class ChannelInfo(object):
     # @channel the pin number in specified mode (board or bcm)
-    # @chip_fd the file descriptor of the chip 
+    # @chip_fd the file descriptor of the chip
     # @line_handle the file descriptor of the line
     # @line_offset Linux GPIO pin number (line offset inside chip, not global)
     # @direction the direction of a pin is configured (in or out)
